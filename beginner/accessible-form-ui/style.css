@@ -1,0 +1,185 @@
+body {
+    margin: 32px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    gap: 4px;
+}
+
+.submit-btn {
+    margin-top: 12px;
+    border: none;
+    padding: 12px;
+    width: 200px;
+    border-radius: 8px;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.submit-btn:hover {
+  background-color: #007bff;
+  color: #121212;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#fullname {
+    border: 1px solid #007bff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#email {
+    border: 1px solid rgb(172, 21, 21);
+    padding: 10px;
+    border-radius: 8px;
+    color: rgb(172, 21, 21);
+}
+
+small {
+  color: rgb(172, 21, 21);
+}
+
+#password { /*nonaktifin style original yg ber id password*/
+    border: none;
+    background: none;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+.password-wrapper {
+    border: 1px solid #007bff;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.password-wrapper button {
+    background: none;
+    border: none;
+}
+
+/* CSS FOR PROGRESS CIRCLE WITH JAVASCRIPT
+.progress-container {
+  position: relative;
+  width: 20px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring {
+  transform: rotate(-90deg); Starts the progress at the top 
+  transform-origin: center;
+}
+
+.progress-ring__track {
+  fill: transparent;
+  stroke: #e6e6e6; Gray background track
+
+.progress-ring__circle {
+  fill: transparent;
+  stroke: #007bff;  Primary progress color
+  stroke-linecap: round;  Gives the bar rounded edges
+  transition: stroke-dashoffset 0.35s ease; Smooth filling animation 
+}
+
+.progress-text {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+*/
+
+.progress-section, .profile-completeness {
+    margin-top: 12px;
+    justify-items: center;
+}
+
+.progress-circle {
+  /* Dimensions */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  
+  /* Center the inner text cutout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Core Magic: The gradient paints the filled vs. empty sections */
+  background: conic-gradient(
+    #007bff 0% var(--progress), 
+    #e6e6e6 var(--progress) 100%
+  );
+  
+  /* Optional: Smooth transition if you change percentages with CSS hover or keyframes */
+  transition: background 0.3s ease; 
+}
+
+.progress-inner {
+  /* Creates the "hollow" donut effect by covering the center */
+  width: 82px; /* 150px minus twice your desired thickness */
+  height: 82px;
+  background: #ffffff; /* Matches your page background color */
+  border-radius: 50%;
+  
+  /* Center the percentage font */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.profile-completeness h2 {
+    font-size: 16px;
+}
+
+.checklist {
+  height: 200px;
+  background-color: aliceblue;
+  padding: 4px 24px;
+  border-radius: 12px;
+}
+
+ul li {
+  list-style: none;
+  margin-left: -42px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}

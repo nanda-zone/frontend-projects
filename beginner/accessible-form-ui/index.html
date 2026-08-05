@@ -10,6 +10,118 @@
     <script src="https://kit.fontawesome.com/a65e9443e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="form-section">
+            <form class="updateProfile-form">
+                <div class="form-field">
+                    <label for="fullname">
+                        Full Name
+                    </label>
+                    <input 
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="What should we call you?"
+                    required
+                    aria-describedby="fullname-error"
+                    >
+                </div>
+                <div class="form-field">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input 
+                    type="text"
+                    id="email"
+                    name="email"
+                    value="gyanendrakala@gmail.com"
+                    required
+                    aria-invalid="true"
+                    aria-describedby="email-error"
+                    >
+                    <small id="email-error" class="error-message" aria-live="polite">
+                        Email is already taken
+                    </small>
+                </div>
+                <div class="form-field">
+                    <label for="enterPassword">
+                        Enter Password
+                    </label>
+                    <div class="password-wrapper">
+                        <input 
+                        type="password"
+                        id="password"
+                        placeholder="xxxxxxxx"
+                        >
+                        <button type="button" aria-label="Show password">
+                        👁    
+                        </button>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="cofirmPassword">
+                        Confirm Password
+                    </label>
+                    <div class="password-wrapper">
+                        <input 
+                        type="password"
+                        id="password"
+                        placeholder="xxxxxxxx"
+                        >
+                        <button type="button" aria-label="Show password">
+                        👁    
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <button type="submit" class="submit-btn">
+                Update Profile
+            </button>
+        </div>
+
+        <!-- progress bar
+        <div class="progress-section">
+            <progress
+                id="profile-progress"
+                value="75"
+                max="100">
+            </progress>
+            <span>75%</span>    
+        </div> 
+        -->
+
+        <!-- circle progress if you want use javascript
+        <div class="progress-container">
+            <svg class="progress-ring" width="120" height="120">
+                 Background track ring
+                <circle class="progress-ring__track" cx="60" cy="60" r="52" stroke-width="8" />
+                 Active progress ring
+                <circle class="progress-ring__circle" cx="60" cy="60" r="52" stroke-width="8" />
+            </svg>
+         Percentage text in the center 
+        <div class="progress-text" id="percentage-label">75%</div>
+        </div>
+        -->
+
+        <div class="progress-section">
+            <!-- css only progress circle - Simply change the number inside --progress to update the ring -->
+            <div class="progress-circle" style="--progress: 75%;">
+                <div class="progress-inner">75%</div>
+            </div>
+
+            <div class="profile-completeness">
+                <h2>Profile Completeness</h2>
+                <div class="checklist">
+                    <ul>
+                        <li class="done">Create Account</li>
+                        <li class="done">Update Roadmap Progress</li>
+                        <li class="done">Setup Public Profile</li>
+                        <li>Complete your First Project</li>
+                        <li>Invite your Friends</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
