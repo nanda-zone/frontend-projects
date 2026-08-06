@@ -10,3 +10,4 @@ project info list:
 7. accessible form ui https://roadmap.sh/projects/accessible-form-ui
 8. image grid layout https://roadmap.sh/projects/image-grid
 9. tooltip ui https://roadmap.sh/projects/tooltip-ui
+10. tabs https://roadmap.sh/projects/simple-tabs
