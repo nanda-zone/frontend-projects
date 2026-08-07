@@ -12,3 +12,4 @@ project info list:
 9. tooltip ui https://roadmap.sh/projects/tooltip-ui
 10. tabs https://roadmap.sh/projects/simple-tabs
 11. cookie consent https://roadmap.sh/projects/cookie-consent
+12. restricted textarea https://roadmap.sh/projects/restricted-textarea
