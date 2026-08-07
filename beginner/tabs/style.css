@@ -8,9 +8,9 @@ body {
 
 .container-tab-content {
     background-color: rgb(104, 158, 104);
-    height: 300px;
     border-radius: 8px;
-    margin-top: -24px;
+    margin-top: -10px;
+    padding: 24px;
 }
 
 .wrapper-tab, .tab {
@@ -22,6 +22,7 @@ body {
     padding: 8px 12px;
     font-weight: 600;
     font-size: 16px;
+    height: 54px;
     background-color: transparent;
 }
 
@@ -45,9 +46,9 @@ ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    height: 300px;
 }
 
 li {
@@ -62,4 +63,22 @@ li {
     color: antiquewhite;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-} 
+}
+
+@media (max-width: 630px){
+    .wrapper-tab, .tab {
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .tab-content {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 520px) {
+    .wrapper-tab, .tab {
+        gap: 4px;
+        font-size: 10px;
+    }
+}
