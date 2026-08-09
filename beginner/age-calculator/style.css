@@ -30,14 +30,27 @@ h1 {
     gap: 8px;
 }
 
-input {
+.form-bar {
     border: 1px solid rgb(248, 161, 241);
     padding: 8px;
     border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
 }
 
-input:focus {
+.fa-calendar-days {
+    color: #261564;
+}
+
+input {
     outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.form-bar input:focus {
+    outline: none;
+    border: none;
 }
 
 button {

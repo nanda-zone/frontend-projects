@@ -6,7 +6,7 @@ const birthdateInput = document.querySelector("#birthdate");
 const form = document.querySelector("#age-form");
 const result = document.querySelector("#result");
 
-// datepicker(birthdateInput);
+datepicker(birthdateInput);
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
