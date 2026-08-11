@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 
 const cards = [
   {
@@ -25,46 +26,53 @@ function App() {
   const progress = ((currentCard + 1) / cards.length) * 100;
 
   return (
-    <div>
+    <div className="app">
       <h1>Flash Cards</h1>
 
-      <div className="progress-bar">
-        <div 
-        className="progess" style={{ width: `${progress}%` }}
-        ></div>
+      <div className="wrapper">
         <p>
-          {currentCard + 1} of {cards.length}
+          Card {currentCard + 1} of {cards.length}
+        </p>
+        <div className="progress-bar">
+          <div 
+            className="progress" 
+            style={{ width: `${progress}%` }}
+          ></div>
+        </div>
+        <p>
+          {progress.toFixed(0)}%
         </p>
       </div>
 
-      <div>
+      <div className="flash-card">
         {showAnswer ? (
           <p>{cards[currentCard].answer}</p>
         ) : (
           <h2>{cards[currentCard].question}</h2>
         )}
 
-        <button onClick={() => {setCurrentCard(currentCard - 1);
-          setShowAnswer(false);}
-        }
-          disabled={currentCard === 0}
-        >
-          Previous
-        </button>
+        <div className="navigation">
+          <button onClick={() => {setCurrentCard(currentCard - 1);
+            setShowAnswer(false);}
+          }
+            disabled={currentCard === 0}
+          >
+            Previous
+          </button>
 
-        <button
-        onClick={() => setShowAnswer(!showAnswer)}>
-          {showAnswer ? "Hide Answer" : "Show Answer"}
-        </button>
-        
-        <button onClick={() => {setCurrentCard(currentCard + 1);
-          setShowAnswer(false);}
-        }
-          disabled={currentCard === cards.length - 1}  
-        >
-          Next
-        </button>
-        
+          <button
+          onClick={() => setShowAnswer(!showAnswer)}>
+            {showAnswer ? "Hide Answer" : "Show Answer"}
+          </button>
+          
+          <button onClick={() => {setCurrentCard(currentCard + 1);
+            setShowAnswer(false);}
+          }
+            disabled={currentCard === cards.length - 1}  
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );
