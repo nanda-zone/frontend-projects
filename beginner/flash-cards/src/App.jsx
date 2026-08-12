@@ -1,4 +1,7 @@
 import { useState } from "react";
+import ProgressBar from "./components/ProgressBar";
+import FlashCard from "./components/FlashCard";
+import Navigation from "./components/Navigation";
 import "./App.css";
 
 const cards = [
@@ -28,50 +31,27 @@ function App() {
   return (
     <div className="app">
       <h1>Flash Cards</h1>
+      <div className="container">
+        <div className="wrapper">
+          <FlashCard
+            question={cards[currentCard].question}
+            answer={cards[currentCard].answer}
+            showAnswer={showAnswer}
+            currentCard={currentCard}
+            totalCards={cards.length}
+          />
 
-      <div className="wrapper">
-        <p>
-          Card {currentCard + 1} of {cards.length}
-        </p>
-        <div className="progress-bar">
-          <div 
-            className="progress" 
-            style={{ width: `${progress}%` }}
-          ></div>
-        </div>
-        <p>
-          {progress.toFixed(0)}%
-        </p>
-      </div>
+          <ProgressBar
+            progress={progress}
+          />
 
-      <div className="flash-card">
-        {showAnswer ? (
-          <p>{cards[currentCard].answer}</p>
-        ) : (
-          <h2>{cards[currentCard].question}</h2>
-        )}
-
-        <div className="navigation">
-          <button onClick={() => {setCurrentCard(currentCard - 1);
-            setShowAnswer(false);}
-          }
-            disabled={currentCard === 0}
-          >
-            Previous
-          </button>
-
-          <button
-          onClick={() => setShowAnswer(!showAnswer)}>
-            {showAnswer ? "Hide Answer" : "Show Answer"}
-          </button>
-          
-          <button onClick={() => {setCurrentCard(currentCard + 1);
-            setShowAnswer(false);}
-          }
-            disabled={currentCard === cards.length - 1}  
-          >
-            Next
-          </button>
+          <Navigation
+            totalCards={cards.length}
+            currentCard={currentCard}
+            setCurrentCard={setCurrentCard}
+            showAnswer={showAnswer}
+            setShowAnswer={setShowAnswer}
+          />
         </div>
       </div>
     </div>

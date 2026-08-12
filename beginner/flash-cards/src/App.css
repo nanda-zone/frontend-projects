@@ -1,3 +1,9 @@
+.container {
+  background: linear-gradient(45deg, #ee99ab, #f8d8e8);
+  border-radius: 36px;
+  padding: 12px;
+}
+
 .app {
   width: 90%;
   max-width: 700px;
@@ -14,9 +20,27 @@
   margin-bottom: 8px;
 }
 
+.wrapper-progress {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px;
+  margin-top: -32px;
+  background-color: white;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  z-index: 999;
+}
+
+.wrapper-progress p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .progress-bar {
   width: 100%;
-  height: 10px;
+  height: 8px;
   background-color: #ddd;
   border-radius: 10px;
   overflow: hidden;
@@ -24,8 +48,10 @@
 
 .progress {
   height: 100%;
-  background-color: red;
+  background: linear-gradient(45deg, #d3215c, #f8d8e8);
   transition: width 0.3s ease;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .progress-bar p {
@@ -33,25 +59,36 @@
 }
 
 .flash-card {
+  position: relative;
   width: 100%;
   min-height: 250px;
-  border: 1px solid aliceblue;
-  border-radius: 8px;
+  background-color: white;
+  border-radius: 28px;
   padding: 24px;
   box-sizing: border-box;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   text-align: center;
+
+  box-shadow: -1px 2px 4px #12121233;
+}
+
+.card-number {
+  position: absolute;
+  top: 4px;
+  font-size: 14px;
 }
 
 .navigation {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 20px;
+  margin-top: 12px;
+  padding: 4px;
 }
 
 .navigation button {
@@ -59,6 +96,8 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  background-color: #fde4f1;
+  color: #9b0d3c;
 }
 
 .navigation button:disabled {
