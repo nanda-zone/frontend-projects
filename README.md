@@ -16,3 +16,4 @@ project info list:
 13. accordion https://roadmap.sh/projects/accordion
 14. age calculator https://roadmap.sh/projects/age-calculator
 15. flashcards https://roadmap.sh/projects/flash-cards
+16. pricing comparison table https://roadmap.sh/projects/pricing-comparison-table
