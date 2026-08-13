@@ -1,5 +1,4 @@
-# Project info
-https://roadmap.sh/projects/flash-cards
+Project info: https://roadmap.sh/projects/flash-cards
 
 # React + Vite
 
