@@ -17,3 +17,4 @@ project info list:
 14. age calculator https://roadmap.sh/projects/age-calculator
 15. flashcards https://roadmap.sh/projects/flash-cards
 16. pricing comparison table https://roadmap.sh/projects/pricing-comparison-table
+17. blog post page https://roadmap.sh/projects/blog-post-page
