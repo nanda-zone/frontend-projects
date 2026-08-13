@@ -1,0 +1,13 @@
+caption {
+    padding: 16px 0;
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid #121212;
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: center;
+}
