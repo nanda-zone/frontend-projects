@@ -1,0 +1,33 @@
+* {
+    font-family: 'Calibri', sans-serif;
+}
+
+body {
+    margin: 32px 64px;
+}
+
+img {
+    width: 100%;
+}
+
+figure {
+    margin-left: 0px;
+}
+
+figcaption {
+    text-align: center;
+}
+
+pre {
+    border: 1px solid #121212;
+}
+
+header p {
+    font-size: 36px;
+}
+
+blockquote {
+    border-left: 2px solid #121212;
+    padding: 0 32px;
+    margin-left: 0;
+}
