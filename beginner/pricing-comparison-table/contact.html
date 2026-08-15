@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <title>Acme Support</title>
+</head>
+<body>
+    <header>
+        <p style="font-size: 32px;">Acme Support</p>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Help</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact us</h1>
+        <p>Send us a message and we will get back to you.</p>
+
+        <form action="">
+            <div class="form-field">
+                <label for="fullname">Full Name</label>
+                <input 
+                type="text" 
+                name="fullname" 
+                id="fullname"
+                placeholder="Enter your name here"
+                required
+                >
+            </div>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input 
+                type="email" 
+                name="email" 
+                id="email"
+                placeholder="youremail@gmail.com"
+                required
+                >
+            </div>
+            <div class="form-field">
+                <label for="subject">Subject</label>
+                <select name="subject" id="subject">
+                    <option value="" disabled selected>Choose a topic</option>
+                    <option value="">Topic A</option>
+                    <option value="">Topic B</option>
+                    <option value="">Topic C</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="message">Message</label>
+                <textarea 
+                name="message" 
+                id="message" 
+                placeholder="What's your thought?" 
+                inlength="250" 
+                required
+                ></textarea>
+            </div>
+            <div class="form-field">
+                <fieldset>
+                    <legend>How did you hear about us?</legend>
+                    <label for="search">
+                        <input type="radio" name="search" id="search">
+                        Search
+                    </label>
+
+                    <label for="friend">
+                        <input type="radio" name="firend" id="firend">
+                        Friend
+                    </label>
+
+                    <label for="social-media">
+                        <input type="radio" name="social-media" id="socmed">
+                        Social Media
+                    </label>
+                </fieldset>
+            </div>
+            <div class="form-field">
+                <input type="checkbox" name="product-update" id="product-update">
+                Send me product updates
+            </div>
+        </form>
+        <button type="submit" id="send-btn">
+            Send message
+        </button>
+    </main>
+    <footer>
+        <p>&copy; 2026 Acme Support</p>
+    </footer>
+</body>
+</html>
