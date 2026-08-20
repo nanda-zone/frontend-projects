@@ -56,37 +56,41 @@
                 name="message" 
                 id="message" 
                 placeholder="What's your thought?" 
-                inlength="250" 
+                minlength="30" 
                 required
+                style="height: 80px;"
                 ></textarea>
             </div>
             <div class="form-field">
                 <fieldset>
                     <legend>How did you hear about us?</legend>
                     <label for="search">
-                        <input type="radio" name="referral" id="search">
+                        <input type="radio" name="referral" id="search" value="search">
                         Search
                     </label>
 
                     <label for="friend">
-                        <input type="radio" name="referral" id="firend">
+                        <input type="radio" name="referral" id="friend" value="friend">
                         Friend
                     </label>
 
-                    <label for="social-media">
-                        <input type="radio" name="referral" id="socmed">
+                    <label for="socmed">
+                        <input type="radio" name="referral" id="socmed" value="social-media">
                         Social Media
                     </label>
                 </fieldset>
             </div>
-            <div class="form-field">
-                <input type="checkbox" name="newslatter" id="newslatter" value="yes">
-                <label for="newslatter">Send me product updates</label>
+            <div id="newslatter-wrapper">
+                <label for="newslatter">
+                    <input type="checkbox" name="newslatter" id="newslatter" value="yes">
+                    Send me product updates
+                </label>
             </div>
+        
+            <button type="submit" id="send-btn">
+                Send message
+            </button>
         </form>
-        <button type="submit" id="send-btn">
-            Send message
-        </button>
     </main>
     <footer>
         <p>&copy; 2026 Acme Support</p>

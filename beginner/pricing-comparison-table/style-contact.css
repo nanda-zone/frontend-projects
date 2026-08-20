@@ -1,6 +1,7 @@
 body {
-    margin: 32px;
-    width: 90%;
+    margin: 0 64px;
+    display: flex;
+    flex-direction: column;
 }
 
 nav a {
@@ -24,6 +25,16 @@ form {
 .form-field {
     display: flex;
     gap: 8px;
+    width: 360px;
+    justify-content: space-between;
+}
+
+#fullname, #email, #message {
+    width: 70%;
+}
+
+#subject {
+    width: 72%;
 }
 
 fieldset {
@@ -31,4 +42,16 @@ fieldset {
     flex-direction: column;
     border: none;
     margin-left: -16px;
+}
+#newslatter {
+    margin-left: 0px;
+}
+
+footer {
+    margin-top: 12px;
+    border-top: 2px solid #121212;
+}
+
+button {
+    width: 124px;
 }
