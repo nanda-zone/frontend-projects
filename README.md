@@ -19,3 +19,4 @@ project info list:
 16. pricing comparison table https://roadmap.sh/projects/pricing-comparison-table
 17. blog post page https://roadmap.sh/projects/blog-post-page
 18. contact form https://roadmap.sh/projects/contact-form
+19. photo showcase https://roadmap.sh/projects/photo-showcase
