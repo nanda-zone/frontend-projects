@@ -20,3 +20,4 @@ project info list:
 17. blog post page https://roadmap.sh/projects/blog-post-page
 18. contact form https://roadmap.sh/projects/contact-form
 19. photo showcase https://roadmap.sh/projects/photo-showcase
+20. pricing cards https://roadmap.sh/projects/pricing-cards
