@@ -1,0 +1,129 @@
+body {
+    font-family:'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    margin: 64px 32px;
+}
+
+h3 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.pricing-card {
+    width: 300px;
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 24px;
+    padding: 24px 24px;
+    display: flex;
+    gap: -24px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pricing-card a {
+    margin-top: auto;
+}
+
+.price {
+    display: flex;
+    gap: 4px;
+}
+
+.price p:nth-child(1) {
+    font-size: 42px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.price p:nth-child(2) {
+    margin-top: 24px;
+}
+
+.tagline {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: left;
+    border-top: 1px solid #121212;
+    padding-top: 12px;
+}
+
+li {
+    padding: 4px 0;
+    font-size: 14px;
+}
+
+.fa-regular {
+    color: green;
+}
+
+a {
+    background-color: rgb(245, 248, 255);
+    color: rgb(23, 22, 78);
+    width: 100%;
+    padding: 8px 0;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid #d9d9d9;
+}
+
+a:hover {
+    background-color: #e7f1fc;
+    transform: scale(1.05);
+}
+
+a:focus-visible {
+    outline: 3px solid #555;
+    outline-offset: 3px;
+}
+
+.highlighted {
+    position: relative;
+    border: 2px solid #eee171;
+    transform: scale(1.04);
+}
+
+.highlighted a {
+    background-color: #faf897;
+    border: 1px solid #eee171;
+    color: #c05006;
+}
+
+.highlighted a:hover {
+    background-color: #f8ed88;
+    transform: scale(1.05);
+}
+
+.highlighted .price p:nth-child(1) {
+    color: #d16f2d;
+}
+
+.badge {
+    position: absolute;
+    top: -16px;
+
+    background-color: #faf897;
+    color: #c05006;
+    padding: 6px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 2px solid #eee171;
+}
