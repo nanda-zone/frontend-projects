@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   const [started, setStarted] = useState(false);
   const [finished] = useState(false);
-
+  
   return (
     <>
       {!started && !finished && (

@@ -1,30 +1,48 @@
+import { useState } from 'react'
+import questions from '../data/questions';
+
 function QuizCard() {
+
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
+    const currentQuestion = questions[0];
+
+
+    function handleAnswerClick(answer) {
+        setSelectedAnswer(answer);
+    }
+
     return (
         <div className="quiz-card">
 
-            <p>Question 1 of 3</p>
+            <p>Question 1 of {questions.length}</p>
 
             <h2>
-                What does HTML stand for?
+                {currentQuestion.question}
             </h2>
 
             <div className="answers">
-                <button>
-                    Hyper Text Markup Language
-                </button>
-
-                <button>
-                    High Text Machine Language
-                </button>
-
-                <button>
-                    Hyperlink Text Management Language
-                </button>
-
-                <button>
-                    Home Tool Markup Language
-                </button>
+                {currentQuestion.answers.map((answer) => (
+                    <button
+                        key={answer}
+                        onClick={() => handleAnswerClick(answer)}
+                        className={
+                            selectedAnswer === answer
+                            ? answer === currentQuestion.correctAnswer
+                                ? "correct"
+                                : "incorrect"
+                            : ""
+                        }
+                    >
+                        {answer}
+                    </button>
+                ))}
             </div>
+
+            {selectedAnswer && (
+                <p>
+                    correct answer: {currentQuestion.correctAnswer}
+                </p>
+            )}
 
         </div>
     );
