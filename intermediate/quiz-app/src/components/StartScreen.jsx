@@ -1,6 +1,6 @@
 function StartScreen({ onStart }) {
     return (
-        <div className="start-screen-container">
+        <div className="start-screen">
             <h1>JavaScript QUIZ</h1>
             <p>Test your JavaScript knowledge!</p>
 

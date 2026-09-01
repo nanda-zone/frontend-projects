@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import questions from '../data/questions';
 
-function QuizCard() {
+function QuizCard({ score, setScore, setFinished }) {
 
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -18,18 +18,40 @@ function QuizCard() {
 
     useEffect(() => {
         if (timeLeft === 0) {
+
+            if (currentQuestion === questions.length - 1) {
+            setFinished(true)
+            return
+        }
+
             setCurrentQuestion(currentQuestion + 1)
             setTimeLeft(10)
             setSelectedAnswer(null)
         }
-    }, [timeLeft])
+    }, [timeLeft, currentQuestion, setFinished])
 
     function handleAnswerClick(answer) {
         setSelectedAnswer(answer)
+
+        if (selectedAnswer) {
+            return
+        }
+
+        setSelectedAnswer(answer)
+
+        if (answer === question.correctAnswer) {
+            setScore(score + 1)
+        }
     }
 
     function handleNext() {
+        if (currentQuestion === questions.length - 1) {
+            setFinished(true)
+            return
+        }
+
         setCurrentQuestion(currentQuestion + 1)
+        setTimeLeft(10)
         setSelectedAnswer(null)
     }
 
@@ -73,7 +95,10 @@ function QuizCard() {
                     onClick={handleNext}
                     disabled={!selectedAnswer}
                 >
-                    Next
+                    {currentQuestion === questions.length - 1
+                        ? "Finish"
+                        : "Next"
+                    }
                 </button>
             </div>
 
