@@ -4,7 +4,10 @@ function StartScreen({ onStart }) {
             <h1>JavaScript QUIZ</h1>
             <p>Test your JavaScript knowledge!</p>
 
-            <button onClick={onStart}>
+            <button 
+                onClick={onStart}
+                className="main-btn"
+            >
                 Start Quiz
             </button>
         </div>

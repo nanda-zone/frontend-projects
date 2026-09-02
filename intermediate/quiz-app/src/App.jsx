@@ -9,6 +9,18 @@ function App() {
   const [started, setStarted] = useState(false);
   const [finished, setFinished] = useState(false);
   const [score, setScore] = useState(0);
+  
+  function handleReplay() {
+      setStarted(true)
+      setFinished(false)
+      setScore(0)
+  }
+
+  function handleMainMenu() {
+    setStarted(false)
+    setFinished(false)
+    setScore(0)
+  }
 
   return (
     <div className="app">
@@ -33,6 +45,8 @@ function App() {
           <ResultScreen 
             score={score}
             totalQuestion={questions.length}
+            onReplay={handleReplay}
+            onMainMenu={handleMainMenu}
           />
         )}
       </div>

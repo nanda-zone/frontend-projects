@@ -7,7 +7,8 @@ function QuizCard({ score, setScore, setFinished }) {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const question = questions[currentQuestion]
     const [timeLeft, setTimeLeft] = useState(10); 
-    
+    const progress = ((currentQuestion + 1) / questions.length) * 100;
+
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft((time) => time - 1)
@@ -57,10 +58,20 @@ function QuizCard({ score, setScore, setFinished }) {
 
     return (
         <div className="quiz-card">
+            <div className="wrapper-progress">
+                <div className="progress-bar">
+                    <div 
+                        className="progress" 
+                        style={{ width: `${progress}%` }}
+                    ></div>
+                </div>
+            </div>
 
-            <p>Question {currentQuestion + 1} of {questions.length}</p>
+            <div className="quiz-card-header">
+                <p id="q-indic">Question {currentQuestion + 1} of {questions.length}</p>
 
-            <p>time left: {timeLeft}s</p>
+                <p id="timer">time left: {timeLeft}s</p>
+            </div>
 
             <h2>
                 {question.question}
@@ -84,13 +95,13 @@ function QuizCard({ score, setScore, setFinished }) {
                 ))}
             </div>
 
-            {selectedAnswer && (
-                <p>
-                    correct answer: {question.correctAnswer}
-                </p>
-            )}
-
             <div className="navigation">
+                {selectedAnswer && selectedAnswer !== question.correctAnswer && (
+                    <p className="correct-answer">
+                        correct answer: {question.correctAnswer}
+                    </p>
+                )}
+
                 <button 
                     onClick={handleNext}
                     disabled={!selectedAnswer}
