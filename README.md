@@ -21,3 +21,4 @@ project info list:
 18. contact form https://roadmap.sh/projects/contact-form
 19. photo showcase https://roadmap.sh/projects/photo-showcase
 20. pricing cards https://roadmap.sh/projects/pricing-cards
+21. quiz app https://roadmap.sh/projects/quiz-app
