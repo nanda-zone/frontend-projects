@@ -11,29 +11,27 @@ function QuizCard({ score, setScore, setFinished }) {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setTimeLeft((time) => time - 1)
+            setTimeLeft((time) => {
+                if (time > 1) {
+                    return time - 1
+                }
+
+                if (currentQuestion === questions.length - 1) {
+                    setFinished(true)
+                    clearInterval(timer)
+                    return 0
+                }
+
+                setCurrentQuestion((prev) => prev + 1)
+                setSelectedAnswer(null)
+                return 10
+            })
         }, 1000)
 
         return () => clearInterval(timer)
-    }, [])
-
-    useEffect(() => {
-        if (timeLeft === 0) {
-
-            if (currentQuestion === questions.length - 1) {
-            setFinished(true)
-            return
-        }
-
-            setCurrentQuestion(currentQuestion + 1)
-            setTimeLeft(10)
-            setSelectedAnswer(null)
-        }
-    }, [timeLeft, currentQuestion, setFinished])
+    }, [currentQuestion, setFinished]);
 
     function handleAnswerClick(answer) {
-        setSelectedAnswer(answer)
-
         if (selectedAnswer) {
             return
         }

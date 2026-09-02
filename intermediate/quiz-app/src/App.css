@@ -71,8 +71,8 @@
 .quiz-card {
   margin: 36px;
   padding: 0 32px;
-  width: 600px;
-  height: 500px;
+  max-width: 600px;
+  max-height: 500px;
 
   display: flex;
   flex-direction: column;
