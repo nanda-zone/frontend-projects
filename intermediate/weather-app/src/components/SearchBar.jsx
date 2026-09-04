@@ -1,13 +1,16 @@
 import { useState } from 'react'
 
-function SearchBar() {
+function SearchBar({ setWeather, setLoading, setError }) {
     const [location, setLocation] = useState('')
-    const [weather, setWeather] = useState(null)
 
     async function handleSearch() {
         if (!location.trim()) {
             return
         }
+
+        setLoading(true)
+        setError(null)
+        setWeather(null)
 
         try {
             const apiKey = import.meta.env.VITE_WEATHER_API_KEY
@@ -15,7 +18,7 @@ function SearchBar() {
             const response = await fetch(url)
 
             if (!response.ok) {
-                throw new Error('Failed to fetch weather data')
+                throw new Error('Location not found')
                 
             }
 
@@ -23,7 +26,9 @@ function SearchBar() {
 
             setWeather(data)
         } catch (error) {
-            console.error(error)
+            setError(error.message)
+        } finally {
+            setLoading(false)
         }
     }
 
@@ -39,10 +44,6 @@ function SearchBar() {
             <button onClick={handleSearch}>
                 Search
             </button>
-
-            {weather && ( //if weather exist, rendering the pre
-                <pre>{JSON.stringify(weather, null, 2)}</pre>
-            )}
         </div>
     )
 }
