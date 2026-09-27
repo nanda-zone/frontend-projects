@@ -1,28 +1,29 @@
+
 .weather-app {
   margin-top: 32px;
-  padding: 16px;
+  padding: 16px 24px;
   background-color: white;
 
-  border-radius: 16px;
+  border-radius: 24px;
+  border: 1px solid #f2f2f2;
 }
 
 .weather-app h1 {
-  font-size: 24px;
+  font-size: 20px;
+  color: rgb(37, 34, 82);
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  background-color: aquamarine;
-  width: 600px;
 }
 
 .top-bar {
   display: flex;
   align-items: center;
-  gap: 32px;
+  
+  justify-content: space-between;
 }
 
 .search-bar {
@@ -33,6 +34,7 @@
 .search-bar input {
   border-style: none;
   border: 1px solid #d9d9d9;
+  background-color: #F9F9F9;
   border-radius: 6px;
   padding: 8px 12px;
 }
@@ -44,6 +46,99 @@
 .search-bar button {
   border-style: none;
   border: 1px solid #d9d9d9;
+  background-color: #d9d9d9;
   border-radius: 6px;
   padding: 8px 12px;
+  color: rgb(37, 34, 82);
+}
+
+.search-bar button:hover {
+  cursor: pointer;
+  background-color: rgb(37, 34, 82);
+  color: white;
+}
+
+.main-content {
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  
+  background-color: #f5f5f5;
+}
+
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  border-radius: 24px;
+  padding: 20px;
+  box-sizing: border-box;
+  
+  background-color: aliceblue;
+  background: linear-gradient(120deg, #ffecf3 10%, #1c41e744 96%);
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.temperature {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.weather-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-details-wrapper {
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.red-message {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hourly-forecast {
+  margin-top: 20px;
+}
+
+.hourly-forecast h2 {
+  margin-bottom: 12px;
+}
+
+.hourly-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.hourly-item {
+  flex: 0 0 100px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f3f3f3;
+  text-align: center;
 }
